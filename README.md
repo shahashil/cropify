@@ -15,6 +15,7 @@ Farmers can initialize this product when the connection is available and once th
 
 ## Solution Flow
 <img src="https://github.com/shahashil/cropify/blob/main/cropify_flow.PNG">
+The  message sent from farmer through WhatsApp is sent to twilio which then forwards our request to the Flask app. If 
 
 ## Road Map
 <img src="https://github.com/shahashil/cropify/blob/main/Cropify%20roadmap.png">
