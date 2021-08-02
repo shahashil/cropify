@@ -13,3 +13,5 @@ Cropify also provides them for weeks weather so that they can plan accordingly.
 Keeping the Internet connectivity problem in mind faemers can receive alerts on weather for their crops on SMS, so even if they are not connected they still can get SMS for weather conditions.
 Farmers can initialize this product when the connection is available and once the soil, crops are predicted and the alert service is activated they can receive weather updates on SMS, so no connectivity problem.
 
+## Solution Flow
+<img src="https://github.com/shahashil/cropify/blob/main/cropify_flow.PNG">
