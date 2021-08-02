@@ -17,4 +17,4 @@ Farmers can initialize this product when the connection is available and once th
 <img src="https://github.com/shahashil/cropify/blob/main/cropify_flow.PNG">
 
 ## Road Map
-<img src="https://github.com/shahashil/cropify/blob/main/cropify_flow.PNG">
+<img src="https://github.com/shahashil/cropify/blob/main/Cropify%20roadmap.pngG">
