@@ -155,7 +155,7 @@ def sms_reply():
 
         ################################################### / PREPROCESS SOIL IMAGE #########################3
     
-        API_KEY = "9PWTEYC3dF-_sx4gkKRR-iGDUv6mqnxH1XHtMxFAnnIx"
+        API_KEY = "cloud IAM api "
         token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey": API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
         mltoken = token_response.json()["access_token"]
 
@@ -163,7 +163,7 @@ def sms_reply():
 
         payload_scoring = {"input_data": [{ "values": [ndarray]}]}
 
-        response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/e84aa939-b91d-4053-98ab-25ef9ad5eef6/predictions?version=2021-07-28', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
+        response_scoring = requests.post('https://us-south.ml.cloud.ibm.comdeployment_url', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
 
         #print(response_scoring.json())
         classes=['alluvial', 'black', 'clay', 'sandyloam']
@@ -205,7 +205,7 @@ def sms_reply():
         start_date =str(date.today()+datetime.timedelta(days=i))
         end_date = str(date.today()+datetime.timedelta(days=i+1))
         
-        api_url = 'https://api.weatherbit.io/v2.0/current?lat='+get_lat +'&lon=' + get_long + '&start_date='+start_date+'&end_date='+end_date+'&key=97af2b57bc734fd9ae8598817fd7a6bd'
+        api_url = 'https://api.weatherbit.io/v2.0/current?lat='+get_lat +'&lon=' + get_long + '&start_date='+start_date+'&end_date='+end_date+'&key=apikey'
         
         token_response = requests.post(api_url)
         ans=token_response.json()
@@ -221,12 +221,12 @@ def sms_reply():
 ############################## / WEATHER API ###################################
  ##################################################   CROP PREDICTION ###########################
    
-        API_KEY = "9PWTEYC3dF-_sx4gkKRR-iGDUv6mqnxH1XHtMxFAnnIx"
+        API_KEY = "cloud IAM api "
         token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey": API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
         mltoken = token_response.json()["access_token"]
         header = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + mltoken}
         payload_scoring = {"input_data":[{"fields":["temperature","humidity","soil","rainfall"],"values":[[ temp, humidity,soil, rain ]]}]}
-        response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/ml/v4/deployments/77e13aac-f583-4024-bdae-b8f8c8ff1414/predictions?version=2021-07-27', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
+        response_scoring = requests.post('https://us-south.ml.cloud.ibm.com/deployment_url', json=payload_scoring, headers={'Authorization': 'Bearer ' + mltoken})
         print("Predicted Crop According to your soil and Location is ")
         predicted_crop =response_scoring.json()
         predicted_crop= predicted_crop["predictions"][0]["values"][0][0]
@@ -245,7 +245,7 @@ def sms_reply():
             get_lat= get_value("lat",rec)
             get_long = get_value("lat",rec)
             rec = rec
-            api_url = 'https://api.weatherbit.io/v2.0/current?lat='+get_lat +'&lon=' + get_long + '&start_date='+start_date+'&end_date='+end_date+'&key=97af2b57bc734fd9ae8598817fd7a6bd'
+            api_url = 'https://api.weatherbit.io/v2.0/current?lat='+get_lat +'&lon=' + get_long + '&start_date='+start_date+'&end_date='+end_date+'&key=api_key'
             token_response = requests.post(api_url)
             ans=token_response.json()
             rain=ans["data"][0]["precip"]
@@ -292,8 +292,8 @@ def alert():
     crops_list = ["rice","wheat","Mung Bean","Tea","maize","cotton"]
 
     def send_reply(rec,msg):
-        account_sid = 'ACddb7576a3dfceeb5761b279b78dec6dc'
-        auth_token = '2f8918fc46850c8724edaaf788759b20'
+        account_sid = 'account sid'
+        auth_token = 'auth token'
         client = Client(account_sid, auth_token)
         message = client.messages \
                 .create(
@@ -319,7 +319,7 @@ def alert():
             print(get_lat,get_long)
             
 
-            api_url = 'https://api.weatherbit.io/v2.0/current?lat='+get_lat +'&lon=' + get_long + '&start_date='+start_date+'&end_date='+end_date+'&key=97af2b57bc734fd9ae8598817fd7a6bd'
+            api_url = 'https://api.weatherbit.io/v2.0/current?lat='+get_lat +'&lon=' + get_long + '&start_date='+start_date+'&end_date='+end_date+'&key=apikey'
             token_response = requests.post(api_url)
             ans=token_response.json()
             rain=ans["data"][0]["pres"]
