@@ -5,7 +5,7 @@ Cropify is a WhatsApp chatbot made with Twilio using IBM's Watson's machine lear
 In Cropify farmers can get weekly analysis of weather condition which would be much helpful for their crops. Also we understand that at farms you may not get an Internet connection every time so we can send them daily alerts on SMS by which they can take appropriate action for their crops. They can activate or deactivate the alerts anytime . We created a Notebook Job in IBM Cloud Pak which will create daily SMS alerts for the weather analysis
 Cropify uses IBM Watson's powerful computation to predict the soil type by deploying image recognition model on IBM space and crops are predicted by getting the locations temperature humidity and temperature which are get by using weather Bit company Api, and the crops are predicted by scoring those parameters on Machine Learning Model made with AutoAI. We have taken refrence from many sources for the needed parameters value or range for best yield and have trained our model according.
 ## The Problem.
-Maximum crops are produced from small scale or marginal farmers of those many lack much needed Knowledge or they dont have any proper access to proper information on the suitable requirements to grow crops through which they get best yield. Also due to unpredictable weather conditions many crops are affected or destroyed sometimes due to extreme weather conditions. Also not many farmers get access to a 3G/4G internet through which they can get proper information on weather. 
+Maximum crops are produced from small scale or marginal farmers of those many lack much needed Knowledge or they dont have any proper access to proper information on the suitable requirements to grow crops through which they get best yield. Also due to unpredictable weather conditions many crops are affected or destroyed sometimes due to extreme weather conditions. Also not many farmers get access to a 3G/4G internet through which they can get proper information on weekly or daily  weather. 
 ## How Cropify Helps Them.
 Cropify hepls them from identifying the type of soil they have on their land, getting the locations Avg. rainfall, temperature and humidity .
 Cropify then takes this parameters and predict the type of crop they should  grow  for best yield.
@@ -18,5 +18,12 @@ Farmers can initialize this product when the connection is available and once th
 The  message sent from farmer through WhatsApp is sent to twilio which then forwards our request to the Flask app. If the requested service is to predict the type of soil
 then image is then  forwarded to the deployed Image Recognition Model in IBM Watson and after getting the prediction back its information is saved in our databse SQLite3.
 After that User needs to send their location of land, in WhatsApp by which we will retrive their coordinates and store it in our database. Once the user request to get prediction on the type of crop to grow we take the coordinates stored in database and get humidity, rain and temperature for that location with WeatherBit API and forward it as a parameter along with the type of soil already predicted to the Machine Learning Model Created with AutoAI Expreriment in IBM Watson. Along with that you can also get Weekly weather updates on your WhatsApp. A Notebook Job is setup in IBM Watson which will set out a HTTP request to our flask app which will then send out daily SMS alert according to our crop predicted.
+
 ## Road Map
 <img src="https://github.com/shahashil/cropify/blob/main/Cropify%20roadmap.png">
+
+### Next Goals
+The current changes or addition we're working on is getting better data on the crop requirement for better yield also getting more insights on that. After that we're trying to better our Image recognition algorithms for better classificaiton of images based on the texture and adding additional feature on predicting it by the availability of types of soil in that area or region. After that we're trying to get better sources for weather APIs to get better prediction. To get better on our alert systems along with adding solutions for extreme weathers which could help them to save crops.
+
+### Next Goals
+Create 
