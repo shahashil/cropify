@@ -15,7 +15,8 @@ Farmers can initialize this product when the connection is available and once th
 
 ## Solution Flow
 <img src="https://github.com/shahashil/cropify/blob/main/cropify_flow.PNG">
-The  message sent from farmer through WhatsApp is sent to twilio which then forwards our request to the Flask app. If 
-
+The  message sent from farmer through WhatsApp is sent to twilio which then forwards our request to the Flask app. If the requested service is to predict the type of soil
+then image is then  forwarded to the deployed Image Recognition Model in IBM Watson and after getting the prediction back its information is saved in our databse SQLite3.
+After that User needs to send their location of land, in WhatsApp by which we will retrive their coordinates and store it in our database. Once the user request to get prediction on the type of crop to grow we take the coordinates stored in database and get humidity, rain and temperature for that location with WeatherBit API and forward it as a parameter along with the type of soil already predicted to the Machine Learning Model Created with AutoAI Expreriment in IBM Watson. Along with that you can also get Weekly weather updates on your WhatsApp. A Notebook Job is setup in IBM Watson which will set out a HTTP request to our flask app which will then send out daily SMS alert according to our crop predicted.
 ## Road Map
 <img src="https://github.com/shahashil/cropify/blob/main/Cropify%20roadmap.png">
