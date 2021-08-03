@@ -26,4 +26,11 @@ After that User needs to send their location of land, in WhatsApp by which we wi
 The current changes or addition we're working on is getting better data on the crop requirement for better yield also getting more insights on that. After that we're trying to better our Image recognition algorithms for better classificaiton of images based on the texture and adding additional feature on predicting it by the availability of types of soil in that area or region. After that we're trying to get better sources for weather APIs to get better prediction. To get better on our alert systems along with adding solutions for extreme weathers which could help them to save crops.
 
 ### Next Goals
-Create 
+Create a Forum type architecture where Farmers can send their questions or can ask for help or can send crop images for health checkup to the regisgtered experts from their WhatsApp only which would be handy for them in case of emergencies. Next we will try to Make a better flow of conversation and to make it feel more humanly we will integrate Watson Assist which would make conversations better.
+
+## Next Goals
+Create better authentification system for new users to join. creating New Feature where uesers can opt to receive 'Ask for Help' from other farmers on WhatsApp.
+
+## Around Mid 2022
+Look out for farmers which would benefit from this project and start pilot project. After that analysing the results and improving our system or algorithms before starting the service for other people.
+
