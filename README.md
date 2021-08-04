@@ -34,3 +34,6 @@ Create better authentification system for new users to join. creating New Featur
 ### Around Mid 2022
 Look out for farmers which would benefit from this project and start pilot project. After that analysing the results and improving our system or algorithms before starting the service for other people.
 
+## Getting Started
+*Prerequisite
+
