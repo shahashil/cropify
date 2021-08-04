@@ -36,5 +36,9 @@ Look out for farmers which would benefit from this project and start pilot proje
 
 ## Getting Started
 **Prerequisite**
-+ Register for [IBM Cloud Account](www.cloud.ibm.com)
++ Register for [IBM Cloud Account](https://cloud.ibm.com/registration)
++ Get weatherBit API key or any other Weather API key 
++ Setup [Twilio Account](https://www.twilio.com/try-twilio)
 
+Create a Machine Learning and IBM Watson Service in IBM Cloud.
+From there in IBM cloud Pak for Data create a AutoAI expreriment and choose to train csv file of data for parameters(Temperature, Humidity, Rainfall and soil) for which the predicted crop gives high yield. Save the pipleline with the highest accuracy and save that as mdoel and promote it to deployemnt sapce and deploy it. Get the Python code generated for accessing the Model for prediction. It will require you to enter IAM api key which can be generated from [IBM Cloud IAM Key](https://cloud.ibm.com/iam).
