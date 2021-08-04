@@ -42,3 +42,11 @@ Look out for farmers which would benefit from this project and start pilot proje
 
 Create a Machine Learning and IBM Watson Service in IBM Cloud.
 From there in IBM cloud Pak for Data create a AutoAI expreriment and choose to train csv file of data for parameters(Temperature, Humidity, Rainfall and soil) for which the predicted crop gives high yield. Save the pipleline with the highest accuracy and save that as mdoel and promote it to deployemnt sapce and deploy it. Get the Python code generated for accessing the Model for prediction. It will require you to enter IAM api key which can be generated from [IBM Cloud IAM Key](https://cloud.ibm.com/iam).
+
+To Make an image recognition Model you can train its model in Notebook in IBM cloub pak, but to train the dataset for Images you first need to uplaod it to any Object bucket, before that you need to create an storage service. To get access of objects in bucket create service credentials and copy its credentials. The code to download it is provided in the (uploaded)notebook itself. Then after training you need to create and publish its model to deployment space and then deploy it. Again copy the Python code generated for accessing the Model for prediction through REST API.
+
+To send Http Request in Flask app create a Notebook job and in that write code to send out a post or get http request to your Flask url and append '/alert' for alerts route. Set the job scheduling to Daily if you want to send Alerts daily.
+
+In the Twilio account you need to give Webhook link of the flask app   and append '/sms' for our App route, in WhatsApp settings in programmable Message tab.
+
+The main driver code file is uploaded as 'main.py'
