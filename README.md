@@ -35,5 +35,6 @@ Create better authentification system for new users to join. creating New Featur
 Look out for farmers which would benefit from this project and start pilot project. After that analysing the results and improving our system or algorithms before starting the service for other people.
 
 ## Getting Started
-*Prerequisite
+**Prerequisite**
++ Register for [IBM Cloud Account](www.cloud.ibm.com)
 
