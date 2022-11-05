@@ -55,3 +55,9 @@ To send Http Request in Flask app create a Notebook job and in that write code t
 In the Twilio account you need to give Webhook link of the flask app   and append '/sms' for our App route, in WhatsApp settings in programmable Message tab.
 
 The main driver code file is uploaded as 'main.py'
+
+## Output Images
+
+
+
+![alt-text-1](https://raw.githubusercontent.com/shahashil/cropify/main/Images/crop1.PNG "") ![alt-text-1](https://raw.githubusercontent.com/shahashil/cropify/main/Images/crop2.PNG "") ![alt-text-1](https://raw.githubusercontent.com/shahashil/cropify/main/Images/crop4.PNG "") ![alt-text-1](https://raw.githubusercontent.com/shahashil/cropify/main/Images/crop3.PNG "")
